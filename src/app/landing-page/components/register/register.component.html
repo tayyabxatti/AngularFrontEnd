@@ -1,0 +1,81 @@
+<!-- sign up -->
+<div class="signup-page">
+    <div class="inner">
+      <h2> Sign up as a {{userType}} </h2>
+      <!-- <h2 name="userType" ngDefaultControl >{{register.userType}}</h2> -->
+
+        <form class="w-100" #registerForm="ngForm" [appMatchEmail]="['email', 'confirmEmail']" [appMatchPassword]="['password', 'confirmPassword']"  (ngSubmit)="registerForm.form.valid && onSubmit()" novalidate>
+          
+          <!-- <div class=" form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" [(ngModel)]="userModal.name" name="name"
+                #name="ngModel" required>
+            <span class="text-danger"
+                *ngIf="(name.touched || registerForm.submitted) && name.errors?.required">
+                Name is required
+            </span>
+        </div> -->
+          
+          
+          <div class="name input">
+                <input type="text" name="firstMame"  [(ngModel)]="register.FirstName" placeholder="First Name*" 
+                #firstMame="ngModel" required>
+                <span class="text-danger"
+                *ngIf="(firstMame.touched || registerForm.submitted) && firstMame.errors?.required">
+                First Name is required
+            </span>
+            </div>
+            <div class="name input">
+                    <input type="text" name="lastName"  [(ngModel)]="register.LastName" placeholder="Last Name*" 
+                    #lastName="ngModel" required>
+                    <span class="text-danger"
+                    *ngIf="(lastName.touched || registerForm.submitted) && lastName.errors?.required">
+                    Last Name is required
+                </span>
+            </div>
+          <div class="email input">
+                <input type="email" name="email"  [(ngModel)]="register.Email" placeholder="Email*"  #email="ngModel" required email>
+                <span class="text-danger"
+                *ngIf="(email.touched || registerForm.submitted) && email.errors?.required">
+                Enter a valid email address
+                </span>
+          </div>
+          <div class="email input">
+            <input type="email" name="confirmEmail" placeholder="Confirm Email*" [(ngModel)]="register.ConfirmEmail"  #confirmEmail="ngModel" required email>
+            <span class="text-danger"
+                *ngIf="(confirmEmail.touched || registerForm.submitted) && confirmEmail.errors?.required">
+                Enter a valid email address
+                </span>
+                <span class="text-danger"
+                *ngIf="confirmEmail.touched && confirmEmail.errors?.emailMisMatch">
+                Email doesnot match
+            </span>
+            </div>
+          <div class="input password">
+              <input type="password" name="password"  [(ngModel)]="register.Password" placeholder="Password*"  #password="ngModel" appPasswordPattern required>
+              <span class="text-danger"
+              *ngIf="(password.touched || registerForm.submitted) && password.errors?.required">
+              Password is required
+          </span>
+          <span class="text-danger" *ngIf="password.touched && password.errors?.invalidPassword">
+            Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+            letter and 1 number
+        </span>
+          </div>
+          <div class="input password">
+            <input type="password"  [(ngModel)]="register.ConfirmPassword"  placeholder="Confirm Password*" name="confirmPassword" #confirmPassword="ngModel" required>
+            <span class="text-danger"
+            *ngIf="(confirmPassword.touched || registerForm.submitted) && confirmPassword.errors?.required">
+            Confirm Password is required
+        </span>
+        <span class="text-danger"
+            *ngIf="confirmPassword.touched && confirmPassword.errors?.passwordMismatch">
+            Passwords does not match
+        </span>
+        </div>
+          <button type="submit" class="btn login">Next</button>
+        </form>
+        <!-- <p class="text-center mt-3"> or <a href="forgot.html">Forgot Password</a> </p> -->
+        <p class="text-center mt-3">  Already have an account?  <a href="sign-up.html">Log in </a> </p>
+    </div>
+  </div>

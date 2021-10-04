@@ -1,0 +1,127 @@
+/*************************
+    Sign Up page
+*************************/
+.signup-page{padding:12% 0px 50px;background: url('../../../../assets/img/banner-background.jpg');
+    background-size: cover;}
+  .signup-page .inner {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 20px;
+  }
+  .signup-page .inner h2, .cpod-title {
+    border-bottom: solid 1px #fff;
+    color: #fff;
+    display: block;
+    font-weight: 700;
+    font-size: 2.4rem;
+    padding: 20px 0px 20px 0px;
+    margin-bottom: 20px;
+    font-family: 'sound_bubble_demoregular';
+  }
+  .signup-page .inner button.facebook {
+    background: #1a538a;
+    color: #fff;border:unset;box-shadow:unset;
+  }
+  .signup-page .inner button.facebook:hover{background:#164675;}
+  .signup-page .inner button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    background: #fbac18;
+    outline: unset;
+    border: unset;
+    box-shadow:unset;
+  }
+  .signup-page .inner button:hover,
+  .signup-page .inner button:focus{background:#a15b1c;}
+  .signup-page .inner button i,
+  .signup-page .inner button img{font-size:20px;margin-right:10px;}
+  .signup-page .inner form input, .signup-page.parent-signup .inner form select, .signup-page.parent-signup .inner form textarea {
+    border-radius: 5px;
+    color: #40484a;
+    font-size: 1rem;
+    height: auto;
+    padding: 14px 45px 14px 40px;
+    border: unset;
+    width: 100%;
+    margin-bottom: 12px;
+    font-weight: 400;transition:0.3s all;
+  }
+  
+  .signup-page.parent-signup .inner form select{cursor:pointer;}
+  .signup-page .inner form input:focus,
+  .signup-page.parent-signup .inner form select:focus,
+  .signup-page.parent-signup .inner form textarea:focus{box-shadow: 0 0 0px 2px #48a1d9;}
+  
+  .signup-page .inner form .input{position:relative;}
+  .signup-page .inner form .input::before {
+    content: '\f0e0';
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    font-size: 16px;
+    color: #cacbcc;
+  }
+  .signup-page.parent-signup .inner form select,
+  .create-pod .select select {
+     /* for Firefox  */
+    -moz-appearance: none;
+     /* for Chrome  */
+    -webkit-appearance: none;
+  }
+  
+  /* For IE10  */
+  .signup-page.parent-signup .inner form select::-ms-expand,
+  .create-pod .select select::-ms-expand {
+    display: none;
+  }
+  .create-pod .select select {
+    width: 200px;cursor:pointer;
+  }
+  .create-pod .select::before {
+    right: 10px;
+  }
+  .signup-page .inner form .input.password::before{content:'\f023';}
+  .signup-page .inner form .input.name::before{content:'\f007';}
+  .signup-page.parent-signup .inner form .input.country:before{content:'\f0ac';}
+  .signup-page.parent-signup .inner form .input.city:before{content:'\f1ad';}
+  .signup-page.parent-signup .inner form .input.u_state:before{content:'\f279';}
+  .signup-page.parent-signup .inner form .input.address:before{content:'\f124';}
+  .signup-page.parent-signup .inner form .input.zip_code:before{content:'\f1c6';}
+  .signup-page.parent-signup .inner form .input.language:before{content:'\f1ab';}
+  .signup-page.parent-signup .inner form .input.p_status:before{content:'\f22d';}
+  .signup-page.parent-signup .inner form .input.caregiver:before{content:'\f184';}
+  .signup-page.parent-signup .inner form .input.p_learning:before{content:'\f02d';}
+  .signup-page.parent-signup .inner form .input.level:before{content:'\f19d';}
+  .signup-page.parent-signup .inner form .input.question:before{content:'\f29c';}
+  .signup-page.parent-signup .inner form .input.dob:before{content:'\f1fd';}
+  .signup-page .inner button.login,
+  .signup-page .inner a.login {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #fbac18;
+    box-shadow: unset;
+    border: unset;
+    color: #fff;
+    font-size: 18px;
+  }
+  .signup-page.parent-signup .inner form textarea{white-space:unset;min-height:150px;}
+  .signup-page .inner button.login:hover,
+  .signup-page .inner a.login:hover{background:#a15b1c;}
+  .signup-page .inner p {
+    color: #fff;
+    font-family: 'arial';
+  }
+  .signup-page .inner p a{color:#fbac18;}
+  .signup-page .inner .add-student.btn {
+    background: #fbac18;
+    border: unset;
+  }
+  .signup-page .inner .add-student.btn:hover{background:#a15b1c;color:#fff;}

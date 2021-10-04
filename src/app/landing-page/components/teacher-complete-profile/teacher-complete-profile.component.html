@@ -1,0 +1,441 @@
+<div class="signup-page parent-signup teacher">
+    <div class="inner">
+      <!-- <p>Welcome {{firstname}} {{lastname}}</p> -->
+      <h2 style="font-size: 28px;">Welcome {{firstname}} Please fill the Below Teacher Registration Form</h2>
+      <!-- <h2> Teacher Sign Up!  </h2> -->
+        <form class="w-100">
+          <div class="parent-first-step d-flex align-items-start justify-content-between w-100 flex-wrap">
+          <div class="name input">
+          <input type="name" name="name" placeholder="First Name">
+          </div>
+          <div class="name input">
+          <input type="name" name="name" placeholder="Last Name">
+          </div>
+          
+          <div class="country input select">
+          <select class="selectpicker countrypicker" data-live-search="true" data-default="United States" data-flag="true"></select>
+          </div>
+          <div class="city input">
+          <input type="text" name="city" placeholder="City">
+          </div>
+          <div class="u_state input select">
+            <select>
+              <option>Alabama</option>
+              <option>Alaska</option>
+              <option>Arizona</option>
+              <option>Arkansas</option>
+              <option>California</option>
+              <option>Colorado</option>
+              <option>Connecticut</option>
+              <option>Delaware</option>
+              <option>Florida</option>
+              <option>Georgia</option>
+              <option>Hawaii</option>
+              <option>Idaho</option>
+              <option>Illinois</option>
+              <option>Indiana</option>
+              <option>Iowa</option>
+              <option>Kansas</option>
+              <option>Kentucky</option>
+              <option>Louisiana</option>
+              <option>Maine</option>
+              <option>Maryland</option>
+              <option>Massachusetts</option>
+              <option>Michigan</option>
+              <option>Minnesota</option>
+              <option>Mississippi</option>
+              <option>Missouri</option>
+              <option>Montana</option>
+              <option>Nebraska</option>
+              <option>Nevada</option>
+              <option>New Hampshire</option>
+              <option>New Jersey</option>
+              <option>New Mexico</option>
+              <option>New York</option>
+              <option>North Carolina</option>
+              <option>North Dakota</option>
+              <option>Ohio</option>
+              <option>Oklahoma</option>
+              <option>Oregon</option>
+              <option>Pennsylvania</option>
+              <option>Rhode Island</option>
+              <option>South Carolina</option>
+              <option>South Dakota</option>
+              <option>Tennessee</option>
+              <option>Texas</option>
+              <option>Utah</option>
+              <option>Vermont</option>
+              <option>Virginia</option>
+              <option>Washington</option>
+              <option>West Virginia</option>
+              <option>Wisconsin</option>
+              <option>Wyoming</option>
+            </select>
+          </div>
+          <div class="address input">
+          <input type="text" name="address" placeholder="Address">
+          </div>
+          <div class="dob input">
+          <input type="text" name="date" placeholder="DOB">
+          </div>
+  
+  
+          <div class="zip_code input">
+          <input type="text" name="zip_code" placeholder="Zip Code">
+          </div>
+          
+          
+          <div class="location input select">
+              <select>
+                <option>Willing to travel to Pod location</option>
+                <option>1 miles (mi)</option>
+                <option>3 mi</option>
+                <option>5mi</option>
+                <option>8mi</option>
+                <option>13mi</option>
+                <option>25mi</option>
+                <option>50mi</option>
+                <option>100mi</option>
+                <option>based on Pod’s zip code</option>
+              </select>
+          </div>
+  
+          <div class="language input select">
+              <select>
+                <option>Pod Primary Speaking Language</option>
+                <option>English</option>
+                <option>Spanish</option>
+                <option>Chinese (Mandarin)</option>
+                <option>Arabic</option>
+                <option>Hindi</option>
+                <option>Italian</option>
+                <option>Korean</option>
+                <option>Vietnamese</option>
+              </select>
+          </div>
+  
+          <div class="language input select">
+              <select>
+                <option>Pod Secondary Speaking Language</option>
+                <option>English</option>
+                <option>Spanish</option>
+                <option>Chinese (Mandarin)</option>
+                <option>Arabic</option>
+                <option>Hindi</option>
+                <option>Italian</option>
+                <option>Korean</option>
+                <option>Vietnamese</option>
+              </select>
+          </div>
+  
+          <div class="p_status input select">
+              <select>
+                <option>Certification status</option>
+                <option>Active</option>
+                <option>Not Active</option>
+              </select>
+          </div>
+  
+          <div class="level input select">
+              <select>
+                <option>Preferred Grade Level </option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>
+          </div>
+          <div class="level input select">
+              <select>
+                <option>Special Needs Teaching Skills  </option>
+                <option>Dyslexia</option>
+                <option>Dysgraphia</option>
+                <option>Dyscalculia</option>
+                <option>Auditory processing disorder</option>
+                <option>Nonverbal learning disability</option>
+                <option>Other health impairment (ADHD)</option>
+                <option>Autism spectrum disorder</option>
+                <option>Emotional disturbance</option>
+                <option>Speech or language impairment</option>
+                <option>Visual impairment</option>
+                <option>Deafness</option>
+                <option>Hearing impairment</option>
+                <option>Orthopedic impairment</option>
+                <option>Intellectual disability</option>
+              </select>
+          </div>
+  <div class="avatar-upload position-relative">
+          <div class="avatar-preview">
+              <div id="teacher_signup_image" style="background-image: url('assets/img/img_avatar.png');">
+              </div>
+          </div>
+          <div class="avatar-edit">
+              <input type='file' id="teacher_signup_avatar" accept=".png, .jpg, .jpeg" />
+              <label for="teacher_signup_avatar"></label>
+          </div>
+          <p class="mt-2 font-weight-bold">Select Your Avatar image</p>
+      </div>
+  <div class="parent-signup-avatar">
+        <img id="teacher_signup" src="assets/img/img_avatar.png">
+        <div class="inner d-flex ali">
+          <img src="assets/img/img_avatar.png" onclick='teacherSignup("assets/img/img_avatar.png");'>
+          <img src="assets/img/avatar2.png" onclick='teacherSignup("assets/img/avatar2.png");'>
+          <img src="assets/img/img_avatar2.png" onclick='teacherSignup("assets/img/img_avatar2.png");'>
+          <img src="assets/img/avatar5.png" onclick='teacherSignup("assets/img/avatar5.png");'>
+          <img src="assets/img/avatar6.png" onclick='teacherSignup("assets/img/avatar6.png");'>
+        </div>
+      </div>
+          <a href="javascript:void(0)" class="btn login first mt-3">Next</a>
+          </div>
+  
+          <div class="parent-second-step d-flex align-items-start justify-content-between w-100 flex-wrap hide">
+            <div class="w-100">
+            <a href="javascript:void(0)" class="first-back"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a>
+            </div>
+            <h6 class="w-100 mb-3 mt-3">COVID-19 Question Assessment Survey </h6>
+          
+  
+          <div class="questions border rounded p-3">
+          <div class="box d-flex align-items-center justify-content-between pb-3 border-bottom">
+            <div class="content">
+                <h6>Do  you have cough?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="cough_yes" name="cough">
+                <label class="custom-control-label" for="cough_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="cough_no" name="cough">
+                <label class="custom-control-label" for="cough_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Do  you have colds?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="colds_yes" name="cold">
+                <label class="custom-control-label" for="colds_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="colds_no" name="cold">
+                <label class="custom-control-label" for="colds_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Are you having Diarhea?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="diarhea_yes" name="diarhea">
+                <label class="custom-control-label" for="diarhea_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="diarhea_no" name="diarhea">
+                <label class="custom-control-label" for="diarhea_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Do you have sore throat?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="throat_yes" name="throat">
+                <label class="custom-control-label" for="throat_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="throat_no" name="throat">
+                <label class="custom-control-label" for="throat_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Are you experiencing MYLAGIA or Body Aches?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="mylagia_yes" name="mylagia">
+                <label class="custom-control-label" for="mylagia_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="mylagia_no" name="mylagia">
+                <label class="custom-control-label" for="mylagia_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Do you have a headache?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="headache_yes" name="headache">
+                <label class="custom-control-label" for="headache_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="headache_no" name="headache">
+                <label class="custom-control-label" for="headache_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Do you have fever (Temperature 37.8 C and above)</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="fever_yes" name="fever">
+                <label class="custom-control-label" for="fever_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="fever_no" name="fever">
+                <label class="custom-control-label" for="fever_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Are you having difficulty breathing?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="breathing_yes" name="breathing">
+                <label class="custom-control-label" for="breathing_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="breathing_no" name="breathing">
+                <label class="custom-control-label" for="breathing_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Are you experiencing Fatigue?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="fatigue_yes" name="fatigue">
+                <label class="custom-control-label" for="fatigue_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="fatigue_no" name="fatigue">
+                <label class="custom-control-label" for="fatigue_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Have you traveled recently during tha past 14 days?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="traveled_yes" name="traveled">
+                <label class="custom-control-label" for="traveled_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="traveled_no" name="traveled">
+                <label class="custom-control-label" for="traveled_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Do you have a travel history to a COVID-19 INFECTED AREA?</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="covid_yes" name="covid">
+                <label class="custom-control-label" for="covid_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="covid_no" name="covid">
+                <label class="custom-control-label" for="covid_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+          <div class="box d-flex align-items-center justify-content-between pt-3 pb-3 border-bottom">
+            <div class="content">
+                <h6>Do you have direct contact or is taking care of a positive COVID-19 PATIENT? (3 PTS)</h6>
+            </div> <!-- content -->
+            <div class="options d-flex align-items-center">
+              <!-- Default unchecked -->
+              <div class="custom-control custom-radio mr-3">
+                <input type="radio" class="custom-control-input" id="takingc_yes" name="takingc">
+                <label class="custom-control-label" for="takingc_yes"><span class="d-inline-block mt-1">yes</span></label>
+              </div>
+  
+              <!-- Default checked -->
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="takingc_no" name="takingc">
+                <label class="custom-control-label" for="takingc_no"><span class="d-inline-block mt-1">No</span></label>
+              </div>
+            </div> <!-- options -->
+          </div> <!-- box -->
+  
+        </div>
+  
+          <button class="btn login mt-3">Submit</button>
+          </div>
+  
+        </form>
+    </div>
+  </div>
+  

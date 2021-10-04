@@ -1,0 +1,126 @@
+<div class="login-page-wrap">
+    <div class="login-page-content">
+        <div class="login-box" style="width: 50%;">
+            <div class="item-logo">
+                <!-- <img src="assets\img\pawsenroute-logo.png" alt="logo">  -->
+            </div>
+            <form class="login-form" [formGroup]="loginForm" autocomplete="off">
+                <div class="row">
+                    <div class="col-lg-6 col-12 form-group">
+                    <label>First Name *</label>
+                    <input type="text" formControlName="firstName" class="form-control">
+                    <p style="color:red"
+                      *ngIf="(loginForm.get('firstName').hasError('required') && loginForm.get('firstName').touched) || (loginForm.controls.firstName.errors && loginForm.get('firstName').touched)">
+                      * Required (Aplha Characters Allowed only)</p>
+                    <p style="color:red" *ngIf="loginForm.controls.firstName.errors?.rangeLength">*Characters min is 3
+                      and max limit is 32</p>
+            </div>
+                <div class="col-lg-6 col-12 form-group">
+                    <label>Last Name *</label>
+                    <input type="text" formControlName="lastName" class="form-control">
+                    <p style="color:red"
+                      *ngIf="(loginForm.get('lastName').hasError('required') && loginForm.get('lastName').touched) || (loginForm.controls.lastName.errors && loginForm.get('lastName').touched)">
+                      * Required (Aplha Characters Allowed only)</p>
+                    <p style="color:red" *ngIf="loginForm.controls.lastName.errors?.rangeLength">*Characters min is 3
+                      and max limit is 32</p>
+                </div>
+
+                <div class="col-lg-12 col-12 form-group">
+                    <label>User Name *</label>
+                    <input type="text" formControlName="userName" class="form-control">
+                    <p style="color:red" *ngIf="loginForm.controls.userName.errors?.rangeLength">*Characters min is 3
+                      and max limit is 64</p>
+                </div>
+
+                <div class="col-lg-12 col-12 form-group">
+                    <label>Role *</label>
+                    <!-- <input type="text" formControlName="role" class="form-control"> -->
+                    <select  class="form-control ngx-datepicker-input font-16x" formControlName="roleId" 
+                    >
+              <option [value]="items.value" *ngFor="let items of rolesDropDown">
+                {{ items.label }}</option>
+                </select>
+                <p style="color:red"
+                      *ngIf="(loginForm.get('roleId').hasError('required') && loginForm.get('roleId').touched)">
+                      * Role is Required </p>
+                </div>
+                <div class="col-lg-12 col-12 form-group">
+                    <ng-container *ngIf="(loginForm.get('roleId').value)==2">
+                    <label>Institution *</label>
+                    <input type="text" formControlName="Institution"  class="form-control" autocomplete="new-password" name="emailAddress"> 
+                </ng-container>
+                </div>
+                <div class="col-lg-12 col-12 form-group">
+                    <ng-container *ngIf="(loginForm.get('roleId').value)==3">
+                    <label>Degree Level *</label>
+                    <input type="text" formControlName="DegreeLevel"  class="form-control"  name="emailAddress"> 
+                </ng-container>
+                </div>
+                <div class="col-lg-12 col-12 form-group">
+                    <ng-container *ngIf="(loginForm.get('roleId').value)==2">
+                    <label>Profession *</label>
+                    <input type="text" formControlName="Profession"  class="form-control" autocomplete="new-password" name="emailAddress"> 
+                </ng-container>
+                </div>
+                <div class="col-lg-12 col-12 form-group">
+                    <ng-container *ngIf="(loginForm.get('roleId').value)==4">
+                    <label>Class *</label>
+                    <select  class="form-control ngx-datepicker-input font-16x" formControlName="classId" 
+                    >
+              <option [value]="items.value" *ngFor="let items of classDropDown">
+                {{ items.label }}</option>
+                </select>
+                </ng-container>
+                </div>
+                <div class="col-lg-12 col-12 form-group">
+                    <label>Email *</label>
+                    <input type="email" formControlName="email" class="form-control" autocomplete="new-password" name="emailAddress"> 
+                    <p style="color:red"
+                      *ngIf="(loginForm.get('email').hasError('required') && loginForm.get('email').touched)">
+                      * Email Required </p>
+                    <p style="color:red"
+                      *ngIf="loginForm.get('email').hasError('validateEmail') && loginForm.get('email').touched">
+                      * Invalid Email</p>
+                    <p style="color:red" *ngIf="loginForm.controls.email.errors?.rangeLength">*Characters min is 3
+                        and max limit is 64</p>
+                </div>
+                <div class="col-lg-12 col-12 form-group">
+                    <label>Password *</label>
+                    <input type="password" formControlName="password" class="form-control"  autocomplete="new-password" name="RegisterPassword">
+                    <p style="color:red"
+                      *ngIf="(loginForm.get('password').hasError('required') && loginForm.get('password').touched) || (loginForm.controls.password.errors && loginForm.get('password').touched)">
+                      * Required </p>
+                    <p style="color:red" *ngIf="loginForm.controls.password.errors?.password">
+                      *Include at least one number and one symbol.
+                      <br>
+                      *be at least 8 characters long.
+                    </p>
+                </div>
+                <div class="col-lg-12 col-12 form-group">
+                    <label>Confirm Password *</label>
+                    <input type="password" formControlName="confirmPassword" class="form-control">
+                    <p style="color:red"
+                      *ngIf="(loginForm.get('confirmPassword').hasError('required') && loginForm.get('confirmPassword').touched) || (loginForm.controls.confirmPassword.errors && loginForm.get('confirmPassword').touched)">
+                      * Required </p>
+                    <p style="color:red" *ngIf="loginForm.controls.confirmPassword.errors?.password">
+                      *Include at least one number and one symbol.
+                      <br>
+                      *be at least 8 characters long.
+                    </p>
+                </div>
+            </div>
+                <div class="form-group d-flex align-items-center justify-content-between">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="remember-me">
+                        <label for="remember-me" class="form-check-label">Remember Me</label>
+                    </div>
+                    <a [routerLink]="['/forgetpassword']" class="forgot-btn">Forgot Password?</a>
+                </div>
+                <div class="form-group">
+                    <button type="submit" (click)="onSubmit()" class="login-btn" style="margin-top: 5%;">Register</button>
+                </div>
+            </form>
+        </div>
+        <div class="sign-up">Have an account ? <a [routerLink]="['/login']">Login!</a></div>
+    </div>
+</div>

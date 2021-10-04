@@ -1,0 +1,125 @@
+<div class="right-inner p-4">
+    <div class="inner-header d-flex align-items-center justify-content-between mb-4">
+          <h3>Pending PODS</h3>
+          <a href="create-pod.html">Create POD</a>
+    </div>
+
+    <!-- body -->
+    <div class="card-body pt-0">
+  <table class="table">
+    <thead style="background:#EFEFEF;border-color:#E2E2E2;">
+    <tr>
+      <th>Profile Pic</th>
+      <th>POD Language</th>
+      <th>Zip code</th>
+      <th>Learning Enviorment</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of lst_pending_pods">
+      <td><img width="60px" height="60px" class="border rounded-circle" [src]="item.content"></td>
+      <td>{{item.pod_Primary_language}}</td>
+      <td>12332</td>
+      <td>{{item.pod_Learning_Environment}}</td>
+      <td>
+        <a (click)="navigateToDetails(item.parentPodID)" class="btn btn-primary">Details</a>
+      </td>
+    </tr>
+    
+    </tbody>
+  </table>
+</div> <!-- card-body -->
+<div class="inner-header d-flex align-items-center justify-content-between mb-4">
+          <h3>PODS List</h3>
+    </div>
+
+    <!-- body -->
+    <div class="card-body pt-0">
+  <table class="table">
+    <thead style="background:#EFEFEF;border-color:#E2E2E2;">
+    <tr>
+      <th>View</th>
+      <th>Profile Pic</th>
+      <th>Teacher Name</th>
+      <th>Subject</th>
+      <th>Location</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td><img width="60px" height="60px" class="border rounded-circle" src="../assets/img/cat.jpg"></td>
+      <td>John Doe</td>
+      <td>Math</td>
+      <td>California</td>
+       
+      <td>
+        <a href="view-pod.html" class="btn btn-primary">View POD</a>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><img width="60px" height="60px" class="border rounded-circle" src="../assets/img/cat.jpg"></td>
+      <td>John Doe</td>
+      <td>Math</td>
+      <td>California</td>
+       
+      <td>
+        <a href="view-pod.html" class="btn btn-primary">View POD</a>
+      </td>
+    </tr>
+    
+    
+    </tbody>
+  </table>
+</div> <!-- card-body -->
+
+<div class="inner-header d-flex align-items-center justify-content-between mb-4">
+          <h3>Recomended Teachers</h3>
+    </div>
+
+    <!-- body -->
+    <div class="card-body pt-0">
+  <table class="table">
+    <thead style="background:#EFEFEF;border-color:#E2E2E2;">
+    <tr>
+      <th>View</th>
+      <th>Teacher Pic</th>
+      <th>Willing to Travel</th>
+      <th>Grade Level</th>
+      <th>Certification</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td><img width="60px" height="60px" class="border rounded-circle" src="../assets/img/cat.jpg"></td>
+      <td>2mile</td>
+      <td>4</td>
+      <td>yes</td>
+      <td>
+        <a href="view-teacher.html" class="btn btn-primary">View</a>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><img width="60px" height="60px" class="border rounded-circle" src="../assets/img/cat.jpg"></td>
+      <td>2mile</td>
+      <td>4</td>
+      <td>yes</td>
+      <td>
+        <a href="view-teacher.html" class="btn btn-primary">View</a>
+      </td>
+    </tr>
+    
+    
+    </tbody>
+  </table>
+</div> card-body
+
+
+</div>
+

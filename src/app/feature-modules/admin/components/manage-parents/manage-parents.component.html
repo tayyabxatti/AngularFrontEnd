@@ -1,0 +1,37 @@
+<div class="vpod-body">
+    
+
+    <div class="vpod-body-inner p-3">
+        <h2>Manage Parents</h2>
+
+      <div class="card-body pt-0">
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Country</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of lst_parent">
+    <td>{{item.firstName}} {{item.lastName}}</td>
+    <td>{{item.email}}</td>
+     <td>{{item.country}}</td>
+     
+    <td>
+      <a  (click)="loadParentDetails(item.userId)" class="btn btn-primary">View</a>  
+    </td>
+  </tr>
+  
+  </tbody>
+</table>
+</div> <!-- card-body -->
+
+    </div> <!-- vpod-body-inner -->
+
+
+    <!--MANAGE TEACHER-->
+
+  </div> <!-- vpod-body -->

@@ -1,0 +1,29 @@
+<!-- sign up -->
+<div class="signup-page">
+    <div class="inner">
+      <h2> Log In to Your CLV Account! </h2>
+        <form class="w-100" #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && onSubmit()" novalidate> 
+          <div class="email input">
+          <input type="email" name="email" placeholder="Email"  [(ngModel)]="auth.Email" #email="ngModel" required email>
+          <span class="text-danger"
+                *ngIf="(email.touched || loginForm.submitted) && email.errors?.required">
+                Enter a valid email address
+                </span>
+          </div>
+          <div class="input password">
+              <input type="password" name="password" placeholder="Password" [(ngModel)]="auth.Password" #password="ngModel" appPasswordPattern required>
+              <span class="text-danger" *ngIf="password.touched && password.errors?.invalidPassword">
+                Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                letter and 1 number
+               </span>
+            <span class="text-danger"
+              *ngIf="(password.touched || loginForm.submitted) && password.errors?.required">
+              Password is required
+          </span>
+          </div>
+          <button type="submit" class="btn login">Log In</button>
+        </form>
+        <p class="text-center mt-3"> or <a routerLink="/forgot-password">Forgot Password</a> </p>
+        <p class="text-center mt-3">  Don't have an account?  <a href="sign-up.html">Sign up </a> </p>
+    </div>
+  </div>

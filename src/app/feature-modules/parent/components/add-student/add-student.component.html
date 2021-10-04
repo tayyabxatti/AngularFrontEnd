@@ -1,0 +1,73 @@
+<div class="clv-dashboard">
+    <div class="right-inner p-4">
+                      
+    
+        <!-- body -->
+        <div class="vpod-body">
+          <div class="inner-header d-flex align-items-center justify-content-between mb-4">
+              <h3>Add New Student</h3>
+        </div>
+    
+          <div class="vpod-body-inner p-3">
+                
+                <form>
+            <div class="box mt-4 view-submission d-flex align-items-start justify-content-between">
+    
+                <div class="left">
+                  <!-- <form class="w-100" #parentForm="ngForm"  (ngSubmit)="parentForm.form.valid && onSubmit()" novalidate>              -->
+    <input class="h6  rounded w-100" [(ngModel)]="obj_add_student.firstName"  type="text" name="first_name" [ngModelOptions]="{standalone: true}" placeholder="First Name">
+    <input class="h6  rounded w-100" [(ngModel)]="obj_add_student.lastName" type="text" name="last_name" [ngModelOptions]="{standalone: true}" placeholder="Last Name">
+    
+    <div class="select w-100 mb-2">
+    <select [(ngModel)]="obj_add_student.learningStyle_ID" [ngModelOptions]="{standalone: true}" class="w-100">
+    <option [value]="0">Learn Style </option>
+    <option *ngFor="let res of lst_lerning_style" [value]="res.id">{{res.name}}</option>  
+    </select>
+    </div>
+    <div class="select w-100 mb-2">
+    <select [(ngModel)]="obj_add_student.specialNeed_ID" [ngModelOptions]="{standalone: true}" class="w-100">
+    <option [value]="0">Special Needs</option>
+    <option *ngFor="let res of lst_special_needs" [value]="res.specialNeedID">{{res.name}}</option>  
+
+    </select>
+    </div>
+    <div class="select w-100 mb-2">
+    <select [(ngModel)]="obj_add_student.gradeLevel_ID" [ngModelOptions]="{standalone: true}" class="w-100">
+    <option [value]="0">Grade Level </option>
+  <option *ngFor="let res of lst_grade_level" [value]="res.gradeLevelID">{{res.name}}</option>  
+  </select>
+    </div>
+    <div class="select w-100 mb-2">
+    <select [(ngModel)]="obj_add_student.subject_ID" [ngModelOptions]="{standalone: true}" class="w-100">
+    <option [value]="0">Pod Learning Subject </option>
+    <option *ngFor="let res of lst_pod_learning_subject" [value]="res.id">{{res.name}}</option>  
+    </select>
+    </div>
+    <input class="h6 rounded w-100" [(ngModel)]="obj_add_student.email" [ngModelOptions]="{standalone: true}" type="email" name="email_name" placeholder="E-mail">
+    <input class="h6 rounded w-100" [(ngModel)]="obj_add_student.password" [ngModelOptions]="{standalone: true}" type="password" name="password" placeholder="Password">
+    <input class="h6 rounded w-100" [(ngModel)]="obj_add_student.confirmPassword" [ngModelOptions]="{standalone: true}" type="password" name="confirm_password" placeholder="Confirm Password">
+                  <a type="submit" (click)="AddStudent()" class="btn btn-primary d-inline-block text-white mt-2 pl-4 pr-4" >
+                  Add Student</a>
+                  </div>
+                  <div class="right">
+                    <div class="border  rounded p-3 mb-4">
+                      <h5>Upload Student Image</h5>
+                      <div class="button">
+                        <p class="mt-2 font-weight-bold">Upload image</p>
+                      <app-file-upload [FileTable]="fileTableName" 
+                      (onUploadFinished)="uploadFinished($event)"></app-file-upload>
+                    </div>
+    
+                  </div>
+    
+                  
+                  </div>
+                </div> <!-- box -->
+            </form>
+    
+          </div> <!-- vpod-body-inner -->
+    
+        </div> <!-- vpod-body -->
+    
+    
+    </div>

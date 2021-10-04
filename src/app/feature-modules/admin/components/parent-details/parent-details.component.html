@@ -1,0 +1,144 @@
+<div class="vpod-body">
+    <!-- <a href="manage-parents.html"><i class="fa fa-angle-left" aria-hidden="true"></i> Back</a> -->
+    <div class="vpod-body-inner p-3">
+      <div class="box mt-4 view-submission d-flex align-items-start justify-content-between">
+
+          <div class="left">
+            
+            <div class="d-flex align-items-start justify-content-between flex-wrap">
+              <div style="width:48%">
+                <h6>First name</h6>
+                <div class="border rounded p-2 mt-2">
+                  <p>{{obj_parent_detail.firstName}}</p>
+                </div>
+              </div> <!-- div -->
+              <div style="width:48%">
+                <h6>Last name</h6>
+                <div class="border rounded p-2 mt-2">
+                  <p>{{obj_parent_detail.lastName}}</p>
+                </div>
+              </div> <!-- div -->
+              <div class="mt-2" style="width:48%">
+                <h6>Country</h6>
+                <div class="border rounded p-2 mt-2">
+                  <p>{{obj_parent_detail.country}}</p>
+                </div>
+              </div> <!-- div -->
+              <div class="mt-2" style="width:48%">
+                <h6>State</h6>
+                <div class="border rounded p-2 mt-2">
+                  <p>{{obj_parent_detail.state}}</p>
+                </div>
+              </div> <!-- div -->
+              <div class="mt-2" style="width:48%">
+                <h6>City</h6>
+                <div class="border rounded p-2 mt-2">
+                  <p>{{obj_parent_detail.city}}</p>
+                </div>
+              </div> <!-- div -->
+              <div class="mt-2" style="width:48%">
+                <h6>Zip Code</h6>
+                <div class="border rounded p-2 mt-2">
+                  <p>{{obj_parent_detail.zipCode}}</p>
+                </div>
+              </div> <!-- div -->
+
+            </div>
+
+            <div class="children mt-4">
+              <h4>Children</h4>
+              <table class="table mt-3">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Name</th>
+                      <th>POD Name</th>
+                      <th>Action</th>
+                    </tr>
+                    </thead>
+                  <tbody>
+                <tr>
+                  <td>1</td>
+                   
+                  <td>Petter Parker</td>
+                  <td>Science</td>
+                   
+                   
+                  <td>
+                    <a href="view-pstudent.html              " class="btn btn-primary">View Detail</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                   
+                  <td>Petter Parker</td>
+                  <td>Science</td>
+                   
+                   
+                  <td>
+                    <a href="view-pstudent.html              " class="btn btn-primary">View Detail</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                   
+                  <td>Petter Parker</td>
+                  <td>Science</td>
+                   
+                   
+                  <td>
+                    <a href="view-pstudent.html              " class="btn btn-primary">View Detail</a>
+                  </td>
+                </tr>
+                
+                </tbody>
+                </table>
+            </div>
+
+            </div>
+            <div class="right">
+              <h4>Covid-19</h4>
+              <div class="border rounded p-3 resume mb-3 mt-3">
+                <h6 *ngIf="obj_parent_detail.covidStatus=='Negative'" class="text-danger">Negative (-)</h6>
+                <h6 *ngIf="obj_parent_detail.covidStatus=='Positive'" class="text-success">Positive (+)</h6>
+                
+                <p class="mt-2 h5 mb-0">{{obj_parent_detail.totalMarks}}/{{obj_parent_detail.obtainMarks}}</p>
+                <button class="btn btn-success mt-2" data-toggle="modal" data-target="#formmodel">View Form</button>
+              </div>
+
+              <!-- model start -->
+                <!-- Modal -->
+<div class="modal fade" id="formmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLongTitle">COVID-19 Question Assessment Survey </h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<div *ngFor="let item of obj_covid_ans">
+    <div class="d-flex align-items-center justify-content-between p-2 border-bottom">
+
+        <p>{{item.question_Description}}</p>
+
+        <span *ngIf="item.answere" class="text-success">Yes</span>
+        <span *ngIf="!item.answere" class="text-danger">No</span>
+
+    </div> <!-- div -->
+</div> 
+</div>
+</div>
+</div>
+</div>
+              <!-- model end -->
+              
+            </div>
+          </div> <!-- box -->
+      
+
+    </div> <!-- vpod-body-inner -->
+
+  </div> <!-- vpod-body -->
+

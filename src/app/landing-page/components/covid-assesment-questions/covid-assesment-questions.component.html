@@ -1,0 +1,29 @@
+<div class="signup-page parent-signup teacher">
+    <div class="inner">
+        <h2 class="w-100 mb-3 mt-3">COVID-19 Question Assessment Survey </h2>
+        
+        <div class="questions border rounded p-3">
+            <div *ngFor="let item of lst_answer"  class="box d-flex align-items-center justify-content-between pb-3 border-bottom">
+                
+              <div   class="content">
+                    <h6>{{item.question_description}}</h6>
+                </div> <!-- content -->
+                <div class="options d-flex align-items-center">
+                  <!-- Default unchecked -->
+                  <div class="custom-control custom-radio mr-3">
+                    <input type="radio" class="custom-control-input" value="yes"  [id]="item.yes_id" checked="false"  [(ngModel)]="item.check_yes" [name]="item.questionId"  >
+                    <label class="custom-control-label" [for]="item.yes_id"><span class="d-inline-block mt-1">yes</span></label>
+                  </div>
+      
+                  <!--Default checked -->
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" [id]="item.no_id" value="no"  [(ngModel)]="item.check_yes" [name]="item.questionId">
+                    <label class="custom-control-label" [for]="item.no_id"><span class="d-inline-block mt-1">No</span></label>
+                  </div>
+                </div> <!-- options -->
+              </div>
+
+            </div>
+            <button class="btn login mt-3" (click)="OnSumbit()">Submit</button>
+</div>
+</div>

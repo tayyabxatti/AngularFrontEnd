@@ -1,0 +1,34 @@
+<div class="clv-dasboard">
+    <div class="main-sidebar" id="main-sidebar">
+        <a class="d-block text-center mb-3 border-bottom pb-3" href="#"><img class="mw-100" src="../../../assets/img/logo.png"></a><ul class="main-menu">
+          
+              <!-- <li><a href="index.html" class="active"><img src="../../../assets/img/home-icon.png"> Home</a></li>
+              <li><a href="pod.html"><img src="../../../assets/img/manage-pod-icon.png"> PODS</a></li> -->
+              <li><a [routerLink]="['/parent/manage-students']" ><img src="../../../assets/img/manage-pod-icon.png"> Manage Students</a></li>
+              <li><a [routerLink]="['/parent/manage-pod']" ><img src="../../../assets/img/manage-pod-icon.png"> Manage Pods</a></li>
+              <!-- <li><a href="tournaments.html"><img src="../../../assets/img/manage-pod-icon.png"> Tournaments</a></li>
+              <li><a href="team-preparation.html"><img src="../../../assets/img/manage-pod-icon.png"> Team Prepration</a></li>
+              <li><a href="chs.html"><img src="../../../assets/img/happiness.png"> CHS</a></li>
+              <li><a href="payments.html"><img src="../../../assets/img/payment-icon.png"> Payments</a></li>
+              <li><a href="setting.html"><img src="../../../assets/img/setting-icon.png"> Settings</a></li>
+              <li><a href="#"><img src="../../../assets/img/user.png"> John Doe</a></li>
+              <li><a href="#"><img src="../../../assets/img/logout.png"> Logout</a></li> -->
+        </ul>
+    </div>
+    
+    <style type="text/css">
+        .clv-dasboard .main-sidebar {
+        width: 230px;
+        overflow: hidden;
+        overflow-y: scroll;
+        background: url('../../../../assets/img/sidebar-bg.jpg');
+        background-repeat: no-repeat !important;
+        background-size: cover;
+        min-height: 100vh;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        scrollbar-width: thin;
+      scrollbar-color: white transparent;
+      }
+      </style>

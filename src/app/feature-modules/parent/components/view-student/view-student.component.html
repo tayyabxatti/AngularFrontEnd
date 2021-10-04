@@ -1,0 +1,58 @@
+<div class="right-inner p-4">
+                  
+
+                  <!-- body -->
+                  <div class="vpod-body">
+                    <div class="inner-header d-flex align-items-center justify-content-between mb-4">
+                        <h3>View student</h3>
+                  </div>
+
+                    <div class="vpod-body-inner p-3">
+                      <div class="w-100 d-flex align-items-center justify-content-between">
+                          <h5>{{obj_student_detail.firstName}} {{obj_student_detail.lastName}}</h5>
+                      </div>
+                      <div class="box mt-4 view-submission d-flex align-items-start justify-content-between">
+
+                          <div class="left">
+                            <div class="d-flex align-items-start justify-content-between flex-wrap">
+                              <div style="width:49%;background:#EFEFEF;border-color:#E2E2E2;" class="mb-2 border rounded p-3">
+                                <h6>Subject</h6>
+                                <p class="text-muted mt-2">{{obj_student_detail.subject}}</p>
+                              </div> <!-- div -->
+                              <div style="width:49%;background:#EFEFEF;border-color:#E2E2E2;" class="mb-2 border rounded p-3">
+                                <h6>Learn Style</h6>
+                                <p class="text-muted mt-2">{{obj_student_detail.learningStyle}}</p>
+                              </div> <!-- div -->
+                              <div style="width:49%;background:#EFEFEF;border-color:#E2E2E2;" class="mb-2 border rounded p-3">
+                                <h6>Special Needs</h6>
+                                <p class="text-muted mt-2">{{obj_student_detail.specialNeed}}</p>
+                              </div> <!-- div -->
+                              <div style="width:49%;background:#EFEFEF;border-color:#E2E2E2;" class="mb-2 border rounded p-3">
+                                <h6>Grade level</h6>
+                                <p class="text-muted mt-2">{{obj_student_detail.specialNeed}}</p>
+                              </div> <!-- div -->
+                              <div style="width:49%;background:#EFEFEF;border-color:#E2E2E2;" class="mb-2 border rounded p-3">
+                                <h6>Pod Learning Subject</h6>
+                                <p class="text-muted mt-2">{{obj_student_detail.subject}}</p>
+                              </div> <!-- div -->
+                              <div style="width:49%;background:#EFEFEF;border-color:#E2E2E2;" class="mb-2 border rounded p-3">
+                                <h6>Email</h6>
+                                <p class="text-muted mt-2">{{obj_student_detail.email}}</p>
+                              </div> <!-- div -->
+                              <div style="width:49%;background:#EFEFEF;border-color:#E2E2E2;" class="mb-2 border rounded p-3">
+                                <h6>Password</h6>
+                                <p class="text-muted mt-2">{{obj_student_detail.password}}</p>
+                              </div> <!-- div -->
+                            </div>
+
+                          </div>
+                            <div class="right border rounded p-2" style="box-shadow:0px 0px 28px 0px #e6e6e6;border-radius:15px;">
+                              <img class="mw-100" [src]="obj_student_detail.image">
+                            </div>
+                          </div> <!-- box -->
+                    </div> <!-- vpod-body-inner -->
+
+                  </div> <!-- vpod-body -->
+
+
+            </div>

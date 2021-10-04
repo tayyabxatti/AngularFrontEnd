@@ -1,0 +1,8 @@
+<div *ngIf="this.email_verified==true" class="signup-page">
+    <h2 class="text-center mt-3">Your email has been verified successfully.</h2>
+    <p class="text-center mt-3">  Click here to  <a [routerLink]="['/login']" >Log in </a> </p>
+</div>
+<div *ngIf="this.email_verified==false" class="signup-page">
+    <h2 class="text-center mt-3">Please Verify your Email to login</h2>
+    <!-- <p class="text-center mt-3">  Click here to  <a [routerLink]="['/login']" >Log in </a> </p> -->
+</div>

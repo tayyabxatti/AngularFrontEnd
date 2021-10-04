@@ -1,0 +1,31 @@
+@media only screen and (min-width : 1200px) {
+  /*  .container{
+        max-width:1170px;
+    }*/
+}
+/*============================================================  
+                    Mobile First Method  
+ =============================================================*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1580px) {
+
+}
+@media only screen and (max-width : 1199px) {
+    
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1024px) {
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 991px) {
+
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 768px) {
+
+}
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 667px) {
+
+}

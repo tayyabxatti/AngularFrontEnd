@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-12">
+    <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;" multiple>
+
+    <!-- <button type="button" style="width: 100%;padding: 15px;" 
+      class="btn-fill-md text-light bg-dark-pastel-green"
+      (click)="file.click()">Upload File</button> -->
+
+    <button type="button" (click)="file.click()"
+      class="nav-link menu-button" >
+      <i style="font-size: initial;" >Choose Avatar File</i></button>
+  </div>
+  <div class="col-md-12">
+    <span class="upload" *ngIf="progress > 0">
+      {{progress}}%
+    </span>
+    <span class="upload" *ngIf="message">
+      {{message}}
+    </span>
+  </div>
+</div>

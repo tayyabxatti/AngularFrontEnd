@@ -1,0 +1,34 @@
+
+<div class="right-inner p-4">
+    <div class="inner-header d-flex align-items-center justify-content-between mb-4">
+          <h3>Student List</h3>
+          <a [routerLink]="['/parent/add-student']">Add Student</a>
+    </div>
+
+    <!-- body -->
+    <div class="card-body pt-0">
+  <table class="table">
+    <thead style="background:#EFEFEF;border-color:#E2E2E2;">
+    <tr>
+      <th>Profile Pic</th>
+      <th>Student Name</th>
+      <th>Subject</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of lst_student">
+      <td><img width="60px" height="60px" class="border rounded-circle" [src]="item.content"></td>
+      <td>{{item.firstName}} {{item.lastName}}</td>
+      <td>{{item.subjectName}}</td>
+       
+      <td>
+        <a (click)="navigateToDetails(item.studentID)" class="btn btn-primary">View Student</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div> <!-- card-body -->
+
+
+</div>
